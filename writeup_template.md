@@ -20,6 +20,12 @@ My pipeline consisted of 6 step:
 
 [//]: # (Image References)
 
+[image1]: ./examples/colorPipe.png "Challenge Video Snapshot"
+
+![alt text][image1]
+
+[//]: # (Image References)
+
 [image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
 
 ![alt text][image2]
