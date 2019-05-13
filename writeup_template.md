@@ -27,16 +27,26 @@ My pipeline consisted of 6 step:
 ---
 
 * A wrapper function was used for each stage of the pipeline so that jupyter's 'interact' module can be used for parameter tuning.
+
 [//]: # (Image References)
 
 [image3]: ./examples/interactiveTuning.png "Interactive Tuning"
 
 ![alt text][image3]
+---
+
 * cannyPipe: Canny edge detection was used to detect edges of the yellow and white lane lines.
 * regionPipe: A trapezoidal ROI was used to filter out the canny edges that correspond to lane lines for ego vehicle.
 * houghPipe: Hough transform was used to pickup straight line edges of the left and right lanes.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by filtering the lane lines obtained from houghLinesP function. Lines on the left half of the image with -0.5 to -0.8 were averaged out to get to get the lane line on the left. Lines on the right half of the image with 0.5 to 0.8 were averaged out to get to get the lane line on the right.
+In order to draw a single line on the left and right lanes, I added a filtering function to filter out the line segments obtained from houghLinesP function in draw_lines() function. Lines on the left half of the image with -0.5 to -0.8 were segregated and averaged out to get the lane line on the left. Lines on the right half of the image with 0.5 to 0.8 were segregated and averaged out to get to get the lane line on the right.
+
+[//]: # (Image References)
+
+[image4]: ./examples/challengeVideoOutput.png "Sample Output"
+
+![alt text][image4]
+---
 
 
 ### 2. Identify potential shortcomings with your current pipeline
