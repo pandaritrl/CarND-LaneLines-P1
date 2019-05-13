@@ -24,33 +24,40 @@ The goals / steps of this project are the following:
 
 ### 1. Pipeline description.
 
-My pipeline consisted of 6 steps. 
-* First I converted RGB image to HLS color space so that color filters can be applied more easily. Mask 1 was used for picking up white objects in the image. Mask 2 was used for picking up yellow objects. A combined mask was used for picking up white and yellow lane lines. This stage of the pipeline was helpful in picking up lane lines on low contrast concrete surface in the challenge video.
+My pipeline consisted of 6 step:
+
+* colorPipe: First I converted RGB image to HLS color space so that color filters can be applied more easily. Mask 1 was used for picking up white objects in the image. Mask 2 was used for picking up yellow objects. A combined mask was used for picking up white and yellow lane lines. This stage of the pipeline was helpful in picking up lane lines on low contrast concrete surface in the challenge video.
 
 [//]: # (Image References)
 
 [image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
-![alt text][image2]
-
-First, I converted the images to grayscale, then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ![alt text][image2]
+---
+
+* A wrapper function was used for each stage of the pipeline so that jupyter's 'interact' module can be used for parameter tuning.
+* cannyPipe: Canny edge detection was used to detect edges of the yellow and white lane lines.
+* regionPipe: A trapezoidal ROI was used to filter out the canny edges that correspond to lane lines for ego vehicle.
+* houghPipe: Hough transform was used to pickup straight line edges of the left and right lanes.
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by filtering the lane lines obtained from houghLinesP function. Lines on the left half of the image with -0.5 to -0.8 were averaged out to get to get the lane line on the left. Lines on the right half of the image with 0.5 to 0.8 were averaged out to get to get the lane line on the right.
+
+
+![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+The potential shortcomings for the pipeline are:
+* The lane line detections jitters a lot when the dashed line disappear at the left and right of the image. The jumps are more pronounced when the road curves to the left or right.
+* The pipeline has not been tested with vehicles at the front of ego vehicle.
+* The pipeline has not been tested with night time driving videos.
+* The pipeline may not work if there are markings on the road (like stop sign)
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to use hough transform that can follow the road curvature
 
-Another potential improvement could be to ...
+Another potential improvement could be to use more bit depth for the images to detect edges more accurately.
