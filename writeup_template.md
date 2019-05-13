@@ -30,6 +30,7 @@ My pipeline consisted of 6 steps.
 [//]: # (Image References)
 
 [image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
+![alt text][image2]
 
 First, I converted the images to grayscale, then I .... 
 
@@ -37,7 +38,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+![alt text][image2]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
