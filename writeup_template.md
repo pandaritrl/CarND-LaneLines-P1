@@ -10,7 +10,8 @@
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+* Build a pipeline using color selection, region masks, canny edge detection and hough space transformation
+* Draw a solid lane line on the left and right lane of the ego car 
 
 
 [//]: # (Image References)
@@ -21,9 +22,16 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Pipeline description.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 6 steps. 
+* First I converted RGB image to HLS color space so that color filters can be applied more easily. Mask 1 was used for picking up white objects in the image. Mask 2 was used for picking up yellow objects. A combined mask was used for picking up white and yellow lane lines. This stage of the pipeline was helpful in picking up lane lines on low contrast concrete surface in the challenge video.
+
+[//]: # (Image References)
+
+[image1]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
+
+First, I converted the images to grayscale, then I .... 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
