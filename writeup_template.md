@@ -34,9 +34,6 @@ My pipeline consisted of 6 step:
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by filtering the lane lines obtained from houghLinesP function. Lines on the left half of the image with -0.5 to -0.8 were averaged out to get to get the lane line on the left. Lines on the right half of the image with 0.5 to 0.8 were averaged out to get to get the lane line on the right.
 
 
-![alt text][image1]
-
-
 ### 2. Identify potential shortcomings with your current pipeline
 
 
