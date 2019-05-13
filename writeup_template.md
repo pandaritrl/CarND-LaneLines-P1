@@ -21,7 +21,7 @@ My pipeline consisted of 6 step:
 
 [//]: # (Image References)
 
-[image2]: ./test_images/challengeSnap2.jpg "Challenge Video Snapshot"
+[image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
 
 ![alt text][image2]
 ---
