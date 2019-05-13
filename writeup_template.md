@@ -27,6 +27,11 @@ My pipeline consisted of 6 step:
 ---
 
 * A wrapper function was used for each stage of the pipeline so that jupyter's 'interact' module can be used for parameter tuning.
+[//]: # (Image References)
+
+[image3]: ./examples/interactiveTuning.png "Interactive Tuning"
+
+![alt text][image3]
 * cannyPipe: Canny edge detection was used to detect edges of the yellow and white lane lines.
 * regionPipe: A trapezoidal ROI was used to filter out the canny edges that correspond to lane lines for ego vehicle.
 * houghPipe: Hough transform was used to pickup straight line edges of the left and right lanes.
