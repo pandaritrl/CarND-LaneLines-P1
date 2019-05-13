@@ -1,9 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
+## Writeup 
 ---
 
 **Finding Lane Lines on the Road**
@@ -13,12 +10,6 @@ The goals / steps of this project are the following:
 * Build a pipeline using color selection, region masks, canny edge detection and hough space transformation
 * Draw a solid lane line on the left and right lane of the ego car 
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
 
 ### Reflection
 
@@ -30,7 +21,7 @@ My pipeline consisted of 6 step:
 
 [//]: # (Image References)
 
-[image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
+[image2]: ./test_images/challengeSnap2.jpg "Challenge Video Snapshot"
 
 ![alt text][image2]
 ---
