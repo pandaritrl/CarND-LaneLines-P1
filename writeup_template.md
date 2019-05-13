@@ -29,7 +29,7 @@ My pipeline consisted of 6 steps.
 
 [//]: # (Image References)
 
-[image1]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
+[image2]: ./examples/challengeSnap2.jpg "Challenge Video Snapshot"
 
 First, I converted the images to grayscale, then I .... 
 
