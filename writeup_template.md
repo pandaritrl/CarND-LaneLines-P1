@@ -1,9 +1,8 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup 
 ---
 
-**Finding Lane Lines on the Road**
+**Goals / Steps**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
@@ -49,7 +48,7 @@ In order to draw a single line on the left and right lanes, I added a filtering 
 ---
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 
 The potential shortcomings for the pipeline are:
@@ -59,7 +58,7 @@ The potential shortcomings for the pipeline are:
 * The pipeline may not work if there are markings on the road (like stop sign)
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to pipeline
 
 A possible improvement would be to use hough transform that can follow the road curvature
 
