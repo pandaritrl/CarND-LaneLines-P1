@@ -16,13 +16,15 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 6 step:
 
-* colorPipe: First I converted RGB image to HLS color space so that color filters can be applied more easily. Mask 1 was used for picking up white objects in the image. Mask 2 was used for picking up yellow objects. A combined mask was used for picking up white and yellow lane lines. This stage of the pipeline was helpful in picking up lane lines on low contrast concrete surface in the challenge video.
+* colorPipe: First I converted RGB image to HLS color space so that color filters can be applied more easily. Mask 1 was used for picking up white objects in the image. Mask 2 was used for picking up yellow objects. A combined mask was used for picking up white and yellow lane lines. 
 
 [//]: # (Image References)
 
 [image1]: ./examples/colorPipe.png "Challenge Video Snapshot"
 
 ![alt text][image1]
+
+This stage of the pipeline was helpful in picking up lane lines on low contrast concrete surface in the challenge video.
 
 [//]: # (Image References)
 
